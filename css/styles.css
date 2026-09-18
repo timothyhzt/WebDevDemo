@@ -26,7 +26,28 @@
     display: block;
 }
 
+#menu-toggle {
+  margin-top: 1rem;
+  background-color: var(--color-terracotta);
+  border: 2px solid var(--color-off-white);
+  border-radius: 0.4rem;
+  box-shadow: 0 0.35rem 0.8rem rgb(0 0 0 / 35%);
+  color: var(--color-off-white);
+  padding: 0.65rem 1.15rem;
+  font: inherit;
+  font-weight: 700;
+    cursor: pointer;
+}
+
+#menu-toggle:hover,
+#menu-toggle:focus-visible {
+  background-color: var(--color-sand);
+  color: var(--color-navy);
+}
+
 body {
+  
+  margin: 0;
   background-color: var(--color-off-white);
   color: var(--color-charcoal);
   font-family: Arial, sans-serif;
@@ -40,6 +61,12 @@ h1, h2, h3 {
 header {
     padding: 1rem;
     background-color: var(--color-navy);
+    color: var(--color-off-white);
+    background-image: url('../assets/Header background.png');
+    background-size: cover;
+    background-position: center;
+
+
 }
 
 
@@ -53,6 +80,8 @@ nav ul {
 }
 
 nav a {
+    display: block;
+    padding: 0.5rem 0;
     color: #ffffff;
     text-decoration: none;
 }
@@ -65,4 +94,29 @@ nav a:focus {
 .button {
   background-color: var(--color-teal);
   color: var(--color-off-white);
+}
+
+main {
+  padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  #main-navigation {
+    display: block;
+  }
+
+  nav ul {
+    flex-direction: row;
+    margin: 0;
+  }
+
+  #menu-toggle {
+    display: none;
+  }
 }
