@@ -30,35 +30,97 @@
             </ul>
          </nav>
         <button class="button" type="button" id="menu-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Toggle main navigation">
-            Menu
+            Menu☰
         </button>
     </header>
     <main id="main-content">
         
 
         <h1 class="page-title">Discover Your Potential</h1>
+
+        <section class="questionnaire">
+            <h2>What Are You Looking For?</h2>
+            <form id="questionnaire-form">
+                <div class="form-field">
+                    <label for="interest">Select your area of interest:</label>
+                    <select id="interest" name="interest" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="programs">Programs</option>
+                        <option value="resources">Resources</option>
+                        <option value="opportunities">Opportunities</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="level">Select your level of study:</label>
+                    <select id="level" name="level" required>
+                        <option value="">--Please choose an option--</option>
+                        <option value="undergraduate">Undergraduate</option>
+                        <option value="graduate">Graduate</option>
+                        <option value="online">Online Learning</option>
+                    </select>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit">Find Out More</button>
+                    <button type="reset">Start Over</button>
+                </div>
+            </form>
+            <div class="questionnaire-result" id="questionnaire-result" aria-live="polite" tabindex="-1" hidden></div>
+
+        </section>
+
+
+
         <section class="opportunities">
             <h2>Explore the Possibilities</h2>
                 <ul>   
-                    <li><a href="programs.html">Programs</a></li>
-                    <li><a href="resources.html">Resources</a></li>
-                    <li><a href="opportunities.html">Opportunities</a></li>
+                    <li>
+                        <a href="programs.html">Programs</a>
+                        <p>Explore areas of study and find programs that connect your interests with your academic goals.</p>
+                    </li>
+                    <li>
+                        <a href="resources.html">Resources</a>
+                        <p>Find advising, planning tools, and practical support to help you make steady progress.</p>
+                    </li>
+                    <li>
+                        <a href="opportunities.html">Opportunities</a>
+                        <p>Discover experiences beyond your coursework, including leadership, career, and learning opportunities.</p>
+                    </li>
                 </ul>
         </section>
         <section class="path">
             <h2>Choose Your Path</h2>
                 <ul>
-                    <li><a href="undergraduate.html">Undergraduate</a></li>
-                    <li><a href="graduate.html">Graduate</a></li>
-                    <li><a href="online.html">Online Learning</a></li>
+                    <li>
+                        <a href="undergraduate.html">Undergraduate</a>
+                        <p>Build a strong foundation through courses, exploration, and support designed for your first college experience.</p>
+                    </li>
+                    <li>
+                        <a href="graduate.html">Graduate</a>
+                        <p>Advance your knowledge through focused study, research, and preparation for your next professional step.</p>
+                    </li>
+                    <li>
+                        <a href="online.html">Online Learning</a>
+                        <p>Find flexible ways to continue your education while balancing work, family, and other responsibilities.</p>
+                    </li>
                 </ul>
         </section>
         <section class="community">
             <h2>Find Your Community</h2>
                 <ul>
-                    <li><a href="student-life.html">Student Life</a></li>
-                    <li><a href="clubs.html">Clubs & Organizations</a></li>
-                    <li><a href="events.html">Events</a></li>
+                    <li>
+                        <a href="student-life.html">Student Life</a>
+                        <p>Learn about the people, traditions, and experiences that shape life beyond the classroom.</p>
+                    </li>
+                    <li>
+                        <a href="clubs.html">Clubs & Organizations</a>
+                        <p>Meet people with shared interests and build leadership skills through involvement and collaboration.</p>
+                    </li>
+                    <li>
+                        <a href="events.html">Events</a>
+                        <p>Stay connected to gatherings, workshops, and activities that bring the college community together.</p>
+                    </li>
             </ul>
         </section>
 
