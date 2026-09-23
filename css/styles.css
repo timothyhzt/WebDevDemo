@@ -1,6 +1,6 @@
 /* Base styles = mobile */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 :root {
@@ -16,14 +16,15 @@
   --color-charcoal: #2B2B2B;
   /* Use sparingly for alerts, featured accents, or attention-drawing actions. */
   --color-terracotta: #C86B4A;
+  --color-light-blue: #B8E3EE;
 }
 
 #main-navigation {
-    display: none;
+  display: none;
 }
 
 #main-navigation.is-open {
-    display: block;
+  display: block;
 }
 
 #menu-toggle {
@@ -36,7 +37,7 @@
   padding: 0.65rem 1.15rem;
   font: inherit;
   font-weight: 700;
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #menu-toggle:hover,
@@ -85,12 +86,12 @@ a {
 
 header {
   padding: 1.25rem 1rem 1.5rem;
-    background-color: var(--color-navy);
-    color: var(--color-off-white);
+  background-color: var(--color-navy);
+  color: var(--color-off-white);
   border-bottom: 0.35rem solid var(--color-terracotta);
-    background-image: url('../assets/Header background.png');
-    background-size: cover;
-    background-position: center;
+  background-image: url('../assets/Header background.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .site-branding {
@@ -119,26 +120,26 @@ header {
 }
 
 nav ul {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin: 1rem 0 0;
-    padding: 0;
-    list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
 }
 
 nav a {
-    display: block;
+  display: block;
   padding: 0.7rem 0.25rem;
   border-bottom: 1px solid rgb(250 249 246 / 35%);
-    color: #ffffff;
-    text-decoration: none;
+  color: #ffffff;
+  text-decoration: none;
   font-weight: 700;
 }
 
 nav a:hover,
 nav a:focus {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .button {
@@ -174,9 +175,9 @@ nav a:focus {
 .opportunities ul,
 .path ul,
 .community ul {
-    list-style: none;
-    margin: 1.25rem 0 0;
-    padding: 0;
+  list-style: none;
+  margin: 1.25rem 0 0;
+  padding: 0;
 } 
 
 .opportunities{
@@ -217,6 +218,35 @@ nav a:focus {
   font-weight: 700;
 }
 
+.opportunities li img,
+.path li img,
+.community li img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid rgb(23 42 58 / 18%);
+}
+
+.subsection-title {
+  margin: 0.75rem 0 0;
+  padding: 0 0.75rem;
+  color: var(--color-navy);
+  font-size: 1.15rem;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.learn-more {
+  width: fit-content;
+  margin-top: auto !important;
+  border: 2px solid var(--color-navy);
+  background-color: var(--color-navy);
+  color: var(--color-off-white) !important;
+  text-decoration: none;
+}
+
 .opportunities li p,
 .path li p,
 .community li p {
@@ -227,6 +257,16 @@ nav a:focus {
 
 .path li a {
   color: var(--color-off-white);
+}
+
+.path .subsection-title {
+  color: var(--color-off-white);
+}
+
+.path .learn-more {
+  border-color: var(--color-off-white);
+  background-color: var(--color-off-white);
+  color: var(--color-navy) !important;
 }
 
 .path li p {
@@ -241,6 +281,16 @@ nav a:focus {
 .community li a:focus-visible {
   background-color: rgb(255 255 255 / 45%);
   text-decoration: none;
+}
+
+.opportunities li .learn-more:hover,
+.opportunities li .learn-more:focus-visible,
+.path li .learn-more:hover,
+.path li .learn-more:focus-visible,
+.community li .learn-more:hover,
+.community li .learn-more:focus-visible {
+  background-color: var(--color-light-blue);
+  color: var(--color-navy) !important;
 }
 .site-footer {
   background-color: var(--color-navy);
@@ -263,12 +313,14 @@ nav a:focus {
 .questionnaire h2 {
   margin-top: 0;
   margin-bottom: 1.25rem;
+  text-align: center;
 }
 
 .questionnaire form {
   display: grid;
-  gap: 1rem;
-  max-width: 48rem;
+  width: min(100%, 48rem);
+  margin: 0 auto;
+  gap: 1.25rem;
 }
 
 .form-field {
@@ -311,13 +363,15 @@ nav a:focus {
 }
 
 .form-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  gap: 1rem;
 }
 
 .form-actions button {
-  flex: 1 1 12rem;
+  width: 100%;
+  margin-top: 0;
 }
 
 .questionnaire-result {
@@ -338,6 +392,47 @@ nav a:focus {
 .questionnaire-result a {
   color: var(--color-navy);
   font-weight: 700;
+}
+
+.construction-page {
+  display: grid;
+  min-height: calc(100vh - 12rem);
+  place-content: center;
+  justify-items: center;
+  gap: 1rem;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.construction-page h1,
+.construction-page p {
+  margin: 0;
+}
+
+.construction-page h1 {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+}
+
+.construction-page p {
+  max-width: 32rem;
+}
+
+.construction-back {
+  margin-top: 0.75rem;
+  border: 2px solid var(--color-navy);
+  border-radius: 0.25rem;
+  background-color: var(--color-teal);
+  color: var(--color-off-white);
+  padding: 0.65rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.construction-back:hover,
+.construction-back:focus-visible {
+  background-color: var(--color-light-blue);
+  color: var(--color-navy);
 }
 
 
@@ -486,6 +581,21 @@ nav a:focus {
   .community li p {
     margin: 0;
     padding: 0;
+  }
+
+  .opportunities li img,
+  .path li img,
+  .community li img {
+    width: 100%;
+  }
+
+  .subsection-title {
+    padding: 0;
+  }
+
+  .learn-more {
+    margin-top: auto !important;
+    padding: 0.65rem 0.75rem !important;
   }
 
   main a {

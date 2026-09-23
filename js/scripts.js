@@ -10,6 +10,19 @@ if (menuButton && navigation) {
     });
 }
 
+const backButton = document.querySelector("#go-back");
+
+if (backButton) {
+    backButton.addEventListener("click", () => {
+        if (window.history.length > 1) {
+            window.history.back();
+            return;
+        }
+
+        window.location.href = "index.html";
+    });
+}
+
 const questionnaireForm = document.querySelector("#questionnaire-form");
 const questionnaireResult = document.querySelector("#questionnaire-result");
 
@@ -17,29 +30,29 @@ const recommendations = {
     interest: {
         programs: {
             label: "programs and degree options",
-            url: "programs.html"
+            url: "under-construction.html"
         },
         resources: {
             label: "student resources",
-            url: "resources.html"
+            url: "under-construction.html"
         },
         opportunities: {
             label: "academic and career opportunities",
-            url: "opportunities.html"
+            url: "under-construction.html"
         }
     },
     level: {
         undergraduate: {
             label: "undergraduate study",
-            url: "undergraduate.html"
+            url: "under-construction.html"
         },
         graduate: {
             label: "graduate study",
-            url: "graduate.html"
+            url: "under-construction.html"
         },
         online: {
             label: "online learning",
-            url: "online.html"
+            url: "under-construction.html"
         }
     }
 };
